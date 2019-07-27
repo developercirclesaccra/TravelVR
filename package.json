@@ -1,5 +1,5 @@
 {
-  "name": "TravelVR",
+  "name": "travelVR",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -19,6 +19,8 @@
   "devDependencies": {
     "babel-jest": "^19.0.0",
     "babel-preset-react-native": "^1.9.1",
+    "eslint": "^5.14.1",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^19.0.2",
     "react-devtools": "^2.5.2",
     "react-test-renderer": "16.0.0",
