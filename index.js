@@ -12,7 +12,7 @@ import {
 } from 'react-360';
 import Flag from './components/Flag';
 
-const { TitleChanger } = NativeModules;
+const { TitleChanger, AudioModule } = NativeModules;
 
 const PLACES = [
     {
@@ -55,7 +55,13 @@ export default class TravelVR extends React.Component {
                     <VrButton
                         onEnter={() => this.setState({ activeFlag: flag })}
                         onExit={() => this.setState({ activeFlag: '' })}
-                        onClick={() => this.changeBackground(panorama, name)}
+                        onClick={() => {
+                            this.changeBackground(panorama, name);
+                            AudioModule.playEnvironmental({
+                                source: asset('music.mp3'),
+                                volume: 0.7
+                            });
+                        }}
                     >
                         <Flag image={flag} activeFlag={this.state.activeFlag} />
                     </VrButton>
@@ -63,6 +69,7 @@ export default class TravelVR extends React.Component {
             );
         });
     }
+
 
     render() {
         const { flagContainer } = styles;
