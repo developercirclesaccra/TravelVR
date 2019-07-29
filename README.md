@@ -23,6 +23,8 @@ npm run test
 
 ## Show your support
 
+[Contributor Code of Conduct](CODE_OF_CONDUCT.md)
+
 Give a ⭐️ if this project helped you!
 
 ***
